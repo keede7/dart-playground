@@ -6,6 +6,8 @@ void main() {
   listCollection();
 
   mapCollection();
+
+  setCollection();
 }
 
 void listCollection() {
@@ -61,4 +63,38 @@ void mapCollection() {
   print(strIntMap);
   print(strIntMap['첫인사']);
 
+}
+
+void setCollection() {
+  print('');
+  print('start To Set Collection ');
+
+  Set<String> set = {
+    "aaa",
+    "bbb",
+    "cccc",
+    "dddd",
+  };
+
+  print(set);
+
+  set.remove("aaa");
+
+  print(set);
+
+  set.add("aaa");
+
+  print(set);
+
+  if(set.contains("aaa")) {
+    print('true');
+  } else {
+    print('false');
+  }
+
+  if(set.contains("aaaa")) {
+    print('true');
+  } else {
+    print('false');
+  }
 }
