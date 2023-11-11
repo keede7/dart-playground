@@ -1,12 +1,15 @@
 
+import 'dart:ffi';
+
 void main() {
 
   listCollection();
 
+  mapCollection();
 }
 
 void listCollection() {
-  List<String> viviz = ["신비", "은하", "엄지"];
+  final List<String> viviz = ["신비", "은하", "엄지"];
 
   print(viviz);
 
@@ -26,5 +29,36 @@ void listCollection() {
   // print(viviz[3]);
 
   print('');
+
+  print(viviz.indexOf("신비"));
+  print(viviz.indexOf("은하"));
+  print(viviz.indexOf("엄지"));
 }
 
+void mapCollection() {
+  print('start to Map Collection');
+
+  final Map<String, String> strIntMap = {
+    '첫인사' : '안녕하세요.',
+    '끝인사' : '안녕히계세요',
+    '권유' : '이 물건은 어떠세요?',
+  };
+
+  print(strIntMap);
+
+  print(strIntMap.keys);
+  print(strIntMap.values);
+
+  print(strIntMap.length);
+  print(strIntMap['첫인사']);
+  print(strIntMap['끝인사']);
+  print(strIntMap['권유']);
+  // Map에서 빈 값을 조회할 경우 null을 반환받는다.
+  // Java와 동일한 방식으로 동작한다.
+  print(strIntMap['권유2']);
+
+  strIntMap.remove('첫인사');
+  print(strIntMap);
+  print(strIntMap['첫인사']);
+
+}
